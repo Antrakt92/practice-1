@@ -1,0 +1,488 @@
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@400;
+
+600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap);
+@charset "UTF-8";
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-facebook:before {
+  content: "\e900";
+}
+
+._icon-instagram:before {
+  content: "\e901";
+}
+
+._icon-line:before {
+  content: "\e902";
+}
+
+._icon-quots:before {
+  content: "\e903";
+}
+
+._icon-select-arrow:before {
+  content: "\e904";
+}
+
+._icon-spoon:before {
+  content: "\e905";
+}
+
+._icon-twitter:before {
+  content: "\e906";
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #AAAAAA;
+  line-height: 1;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+body {
+  background-color: #0C0B08;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 81.25rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=__container_wide] {
+  max-width: 105rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header__logo {
+  font-family: "Cormorant Upright", serif;
+}
+
+.icon-menu {
+  display: none;
+}
+
+.header {
+  color: #FFFFFF;
+}
+
+.header__container_wide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  font-weight: 700;
+  line-height: 130%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.header__logo:hover {
+  color: #DCCA87;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  row-gap: 5px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu__item {
+  white-space: nowrap;
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.menu__item:hover {
+  color: #DCCA87;
+}
+
+.menu__link {
+  line-height: 175%;
+  letter-spacing: 0.04em;
+}
+
+.auth-header {
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  row-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.auth-header__item {
+  -webkit-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.auth-header__item:hover {
+  color: #DCCA87;
+}
+
+@media (min-width: 83.125em) {
+  .header__container_wide {
+    min-height: 7.5625rem;
+  }
+
+  .header__logo {
+    font-size: 2.75rem;
+  }
+
+  .menu__list {
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+
+  .auth-header {
+    -webkit-column-gap: 3.125rem;
+       -moz-column-gap: 3.125rem;
+            column-gap: 3.125rem;
+  }
+}
+
+@media (max-width: 48em) {
+  .header__logo {
+    font-size: 1.5625rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .header__container_wide {
+    min-height: 3.125rem;
+  }
+}
+
+@media (max-width: 71.875em) {
+  .auth-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+
+  .auth-header__item_img {
+    display: none;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 2.5rem;
+    height: 1.375rem;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .icon-menu span,
+  .icon-menu::before,
+  .icon-menu::after {
+    content: "";
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 0.125rem;
+    background-color: white;
+  }
+
+  .icon-menu::before {
+    top: 0;
+  }
+
+  .icon-menu::after {
+    bottom: 0;
+  }
+
+  .icon-menu span {
+    top: calc(50% - 0.0625rem);
+  }
+
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+
+  .menu-open .icon-menu::before {
+    top: calc(50% - 0.0625rem);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 0.0625rem);
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+
+  .header__container_wide {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+  }
+
+  .auth-header {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .header__container_wide {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 83.125em) {
+@supports (min-height: clamp( 3.125rem , 1.7190594059rem  +  7.0297029703vw , 7.5625rem )) {
+    .header__container_wide {
+      min-height: clamp( 3.125rem , 1.7190594059rem  +  7.0297029703vw , 7.5625rem );
+    }
+}
+
+@supports not (min-height: clamp( 3.125rem , 1.7190594059rem  +  7.0297029703vw , 7.5625rem )) {
+    .header__container_wide {
+      min-height: calc(3.125rem + 4.4375 * (100vw - 20rem) / 63.125);
+    }
+}
+}
+
+@media (min-width: 48em) and (max-width: 83.125em) {
+@supports (font-size: clamp( 1.5625rem , -0.0602758007rem  +  3.3807829181vw , 2.75rem )) {
+    .header__logo {
+      font-size: clamp( 1.5625rem , -0.0602758007rem  +  3.3807829181vw , 2.75rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.5625rem , -0.0602758007rem  +  3.3807829181vw , 2.75rem )) {
+    .header__logo {
+      font-size: calc(1.5625rem + 1.1875 * (100vw - 48rem) / 35.125);
+    }
+}
+
+@supports ((-moz-column-gap: clamp( 0.9375rem , -0.5144572954rem  +  3.024911032vw , 2rem )) or (column-gap: clamp( 0.9375rem , -0.5144572954rem  +  3.024911032vw , 2rem ))) {
+    .menu__list {
+      -webkit-column-gap: clamp( 0.9375rem , -0.5144572954rem  +  3.024911032vw , 2rem );
+         -moz-column-gap: clamp( 0.9375rem , -0.5144572954rem  +  3.024911032vw , 2rem );
+              column-gap: clamp( 0.9375rem , -0.5144572954rem  +  3.024911032vw , 2rem );
+    }
+}
+
+@supports not ((-moz-column-gap: clamp( 0.9375rem , -0.5144572954rem  +  3.024911032vw , 2rem )) or (column-gap: clamp( 0.9375rem , -0.5144572954rem  +  3.024911032vw , 2rem ))) {
+    .menu__list {
+      -webkit-column-gap: calc(0.9375rem + 1.0625 * (100vw - 48rem) / 35.125);
+         -moz-column-gap: calc(0.9375rem + 1.0625 * (100vw - 48rem) / 35.125);
+              column-gap: calc(0.9375rem + 1.0625 * (100vw - 48rem) / 35.125);
+    }
+}
+}
+
+@media (min-width: 71.875em) and (max-width: 83.125em) {
+@supports ((-moz-column-gap: clamp( 0.9375rem , -13.0381944444rem  +  19.4444444444vw , 3.125rem )) or (column-gap: clamp( 0.9375rem , -13.0381944444rem  +  19.4444444444vw , 3.125rem ))) {
+    .auth-header {
+      -webkit-column-gap: clamp( 0.9375rem , -13.0381944444rem  +  19.4444444444vw , 3.125rem );
+         -moz-column-gap: clamp( 0.9375rem , -13.0381944444rem  +  19.4444444444vw , 3.125rem );
+              column-gap: clamp( 0.9375rem , -13.0381944444rem  +  19.4444444444vw , 3.125rem );
+    }
+}
+
+@supports not ((-moz-column-gap: clamp( 0.9375rem , -13.0381944444rem  +  19.4444444444vw , 3.125rem )) or (column-gap: clamp( 0.9375rem , -13.0381944444rem  +  19.4444444444vw , 3.125rem ))) {
+    .auth-header {
+      -webkit-column-gap: calc(0.9375rem + 2.1875 * (100vw - 71.875rem) / 11.25);
+         -moz-column-gap: calc(0.9375rem + 2.1875 * (100vw - 71.875rem) / 11.25);
+              column-gap: calc(0.9375rem + 2.1875 * (100vw - 71.875rem) / 11.25);
+    }
+}
+}
