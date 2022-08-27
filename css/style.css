@@ -183,6 +183,14 @@ body {
   max-width: 105rem;
 }
 
+[data-fullscreen] {
+  min-height: 100vh;
+}
+
+.touch [data-fullscreen] {
+  min-height: calc(var(--vh, 1vh) * 100);
+}
+
 [class*=-ibg] {
   position: relative;
 }
@@ -310,8 +318,17 @@ body {
   color: #DCCA87;
 }
 
+.main-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .main-slider__container_wide {
   position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .main-slider__menu {
@@ -339,13 +356,32 @@ body {
   position: relative;
 }
 
-.body-main-slider__wrapper {
+.body-main-slider {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.body-main-slider__slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body-main-slider__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  height: 100%;
 }
 
 .body-main-slider__slide {
@@ -360,6 +396,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.body-main-slider__boolets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 64px 0 70px 0;
 }
 
 .mainpage-box-text {
@@ -473,6 +519,18 @@ body {
     margin-top: 12.0625rem;
   }
 
+  .body-main-slider__wrapper {
+    padding-bottom: 11.8125rem;
+  }
+
+  .body-main-slider__boolets {
+    padding-top: 4rem;
+  }
+
+  .body-main-slider__boolets {
+    padding-bottom: 4.375rem;
+  }
+
   .mainpage-box-text__sub-header {
     font-size: 1.4375rem;
   }
@@ -515,6 +573,12 @@ body {
 }
 
 @media (max-width: 47.99875em) {
+  .touch [data-fullscreen] {
+    -webkit-transition: height 0.2s;
+    -o-transition: height 0.2s;
+    transition: height 0.2s;
+  }
+
   .icon-menu {
     display: block;
     position: relative;
@@ -659,6 +723,18 @@ body {
     margin-top: 3.75rem;
   }
 
+  .body-main-slider__wrapper {
+    padding-bottom: 5rem;
+  }
+
+  .body-main-slider__boolets {
+    padding-top: 1.875rem;
+  }
+
+  .body-main-slider__boolets {
+    padding-bottom: 1.875rem;
+  }
+
   .mainpage-box-text__sub-header {
     font-size: 1rem;
   }
@@ -694,6 +770,42 @@ body {
 @supports not (margin-top: clamp( 3.75rem , 1.5333333333rem  +  12.6666666667vw , 12.0625rem )) {
     .body-main-slider__wrapper {
       margin-top: calc(3.75rem + 8.3125 * (100vw - 17.5rem) / 65.625);
+    }
+}
+
+@supports (padding-bottom: clamp( 5rem , 3.1833333333rem  +  10.380952381vw , 11.8125rem )) {
+    .body-main-slider__wrapper {
+      padding-bottom: clamp( 5rem , 3.1833333333rem  +  10.380952381vw , 11.8125rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 5rem , 3.1833333333rem  +  10.380952381vw , 11.8125rem )) {
+    .body-main-slider__wrapper {
+      padding-bottom: calc(5rem + 6.8125 * (100vw - 17.5rem) / 65.625);
+    }
+}
+
+@supports (padding-top: clamp( 1.875rem , 1.3083333333rem  +  3.2380952381vw , 4rem )) {
+    .body-main-slider__boolets {
+      padding-top: clamp( 1.875rem , 1.3083333333rem  +  3.2380952381vw , 4rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.875rem , 1.3083333333rem  +  3.2380952381vw , 4rem )) {
+    .body-main-slider__boolets {
+      padding-top: calc(1.875rem + 2.125 * (100vw - 17.5rem) / 65.625);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.875rem , 1.2083333333rem  +  3.8095238095vw , 4.375rem )) {
+    .body-main-slider__boolets {
+      padding-bottom: clamp( 1.875rem , 1.2083333333rem  +  3.8095238095vw , 4.375rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.875rem , 1.2083333333rem  +  3.8095238095vw , 4.375rem )) {
+    .body-main-slider__boolets {
+      padding-bottom: calc(1.875rem + 2.5 * (100vw - 17.5rem) / 65.625);
     }
 }
 
